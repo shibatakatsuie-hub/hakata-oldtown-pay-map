@@ -1,0 +1,24 @@
+{
+ "programs": [
+  {
+   "id": "hakata-oldtown-pay",
+   "name": "博多旧市街PAY",
+   "issuer": "御供所名店会",
+   "area": "福岡市博多区（博多旧市街・御供所周辺）",
+   "source_name": "博多旧市街PAY 公式サイト「利用可能店舗」",
+   "source_url": "https://hakata-oldtownpay.com/shoplist/",
+   "official_url": "https://hakata-oldtownpay.com/",
+   "source_retrieved_at": "2026-10-21",
+   "valid_from": "2026-08-07",
+   "valid_to": "2026-12-31",
+   "file": "hakata-oldtown-pay.json",
+   "map_center": [
+    33.5905,
+    130.4135
+   ],
+   "map_zoom": 15,
+   "shop_count": 76,
+   "generated_at": "2026-10-21"
+  }
+ ]
+}

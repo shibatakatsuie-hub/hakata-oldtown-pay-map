@@ -1,0 +1,1226 @@
+[
+ {
+  "id": "hop-b82a9f",
+  "name": "大久保酒店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-27-14",
+  "phone": "092-431-3093",
+  "website": "https://www.gokusho.info/map/gourmet/okubo-saketen.html",
+  "note": null,
+  "lat": 33.594715,
+  "lon": 130.418808,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-27-14"
+  }
+ },
+ {
+  "id": "hop-cf8ed1",
+  "name": "焼鳥 たんべ",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町10-29 1F",
+  "phone": "080-4284-5200",
+  "website": "https://www.instagram.com/yakitori_tanbe/",
+  "note": null,
+  "lat": 33.598053,
+  "lon": 130.411118,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町10-29"
+  }
+ },
+ {
+  "id": "hop-637d93",
+  "name": "大博軒",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町10-25",
+  "phone": "092-291-1282",
+  "website": "https://www.facebook.com/profile.php?id=100054512137094",
+  "note": null,
+  "lat": 33.598293,
+  "lon": 130.410797,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町10-25"
+  }
+ },
+ {
+  "id": "hop-55111c",
+  "name": "呉服のたかはし",
+  "category": "ジュエリー・ファッション",
+  "tags": [],
+  "address": "福岡市博多区店屋町6-28",
+  "phone": "092-262-0688",
+  "website": "https://www.facebook.com/gofukuno/",
+  "note": null,
+  "lat": 33.596344,
+  "lon": 130.409271,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区店屋町6-28"
+  }
+ },
+ {
+  "id": "hop-ac750f",
+  "name": "炉端 肉焼き処 猛伸(たけし)",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区冷泉町10-10 サンセイビル1F",
+  "phone": "092-272-5522",
+  "website": "https://takeshi.owst.jp/",
+  "note": null,
+  "lat": 33.595337,
+  "lon": 130.411636,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区冷泉町10-10"
+  }
+ },
+ {
+  "id": "hop-654783",
+  "name": "プレジデントホテル博多",
+  "category": "宿泊",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-23-5",
+  "phone": "092-441-8811",
+  "website": "https://president-hotel.jp/hakata/",
+  "note": null,
+  "lat": 33.593929,
+  "lon": 130.418091,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-5"
+  }
+ },
+ {
+  "id": "hop-799e4a",
+  "name": "プレジデント ホテル アネックス",
+  "category": "宿泊",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-23-9",
+  "phone": "092-441-8811",
+  "website": "https://president-hotel.jp/hakata/annex/",
+  "note": "お問い合わせ先はプレジデントホテル博多",
+  "lat": 33.594204,
+  "lon": 130.418381,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-9"
+  }
+ },
+ {
+  "id": "hop-d57a09",
+  "name": "ホテル ラ フォレスタ",
+  "category": "宿泊",
+  "tags": [],
+  "address": "福岡市博多区博多駅東1-1-29",
+  "phone": "092-483-7711",
+  "website": "https://president-hotel.jp/foresta-hakata/",
+  "note": null,
+  "lat": 33.592121,
+  "lon": 130.422134,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅東1-1-29"
+  }
+ },
+ {
+  "id": "hop-7b492d",
+  "name": "HOTEL サードプレイス博多",
+  "category": "宿泊",
+  "tags": [],
+  "address": "福岡市博多区堅粕2-2-2",
+  "phone": "092-642-4563",
+  "website": "https://president-hotel.jp/thirdplace-hakata/",
+  "note": null,
+  "lat": 33.595428,
+  "lon": 130.420761,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区堅粕2-2-2"
+  }
+ },
+ {
+  "id": "hop-105141",
+  "name": "和創作呑処 緩音",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-23-5",
+  "phone": "092-441-8833",
+  "website": "https://president-dining.jp/ka-non/",
+  "note": null,
+  "lat": 33.593929,
+  "lon": 130.418091,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-5"
+  }
+ },
+ {
+  "id": "hop-50ba96",
+  "name": "カジュアルバー「PITBULL BROTHERS」",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅東1-1-29(ホテル ラ フォレスタ1F)",
+  "phone": "092-483-7733",
+  "website": "https://president-dining.jp/pitbull/",
+  "note": null,
+  "lat": 33.592121,
+  "lon": 130.422134,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅東1-1-29"
+  }
+ },
+ {
+  "id": "hop-234fe5",
+  "name": "ジュエリー工房 ZERO",
+  "category": "ジュエリー・ファッション",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-17",
+  "phone": "092-272-0728",
+  "website": "https://original-jeweler-zero.co.jp/",
+  "note": null,
+  "lat": 33.598915,
+  "lon": 130.410782,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-17"
+  }
+ },
+ {
+  "id": "hop-bed6de",
+  "name": "めしや漠",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-15",
+  "phone": "050-5486-0972",
+  "website": "https://meshiyabaku.gorp.jp/",
+  "note": null,
+  "lat": 33.598778,
+  "lon": 130.410645,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-15"
+  }
+ },
+ {
+  "id": "hop-da2902",
+  "name": "まりも本店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-212",
+  "phone": "092-281-0380",
+  "website": "https://marimohonten.com/",
+  "note": "昼は皿うどんのみ・夜は完全予約制",
+  "lat": 33.59848,
+  "lon": 130.411102,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-212"
+  }
+ },
+ {
+  "id": "hop-7e744d",
+  "name": "自家焙煎珈琲屋 綾杉",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町3-14",
+  "phone": "090-5698-7777",
+  "website": "https://www.instagram.com/ayasugi_kaffee/",
+  "note": null,
+  "lat": 33.597843,
+  "lon": 130.412216,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町3-14"
+  }
+ },
+ {
+  "id": "hop-f3226e",
+  "name": "和久伊",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町5-4",
+  "phone": "092-263-0578",
+  "website": "https://wakuihakata.gorp.jp/",
+  "note": null,
+  "lat": 33.596138,
+  "lon": 130.412643,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町5-4"
+  }
+ },
+ {
+  "id": "hop-4c9a8c",
+  "name": "雑煮のせき亭",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-7-16",
+  "phone": "092-451-1621",
+  "website": "https://zouninosekitei.com/",
+  "note": null,
+  "lat": 33.594402,
+  "lon": 130.415787,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-7-16"
+  }
+ },
+ {
+  "id": "hop-08f035",
+  "name": "ピザ&BAR ぱせりこ",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区中呉服町4-1",
+  "phone": "092-263-0170",
+  "website": "https://www.instagram.com/pase_rico/",
+  "note": null,
+  "lat": 33.598801,
+  "lon": 130.410248,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町4-1"
+  }
+ },
+ {
+  "id": "hop-32ab98",
+  "name": "Shinar bulan シナールブラン",
+  "category": "美容・エステ",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-16 TAKAI B.L.D2F",
+  "phone": "092-271-0661",
+  "website": "https://sinarbulan.net/index.html",
+  "note": null,
+  "lat": 33.59885,
+  "lon": 130.410721,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-16"
+  }
+ },
+ {
+  "id": "hop-1446c1",
+  "name": "如水庵 博多駅前本店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区博多駅前2丁目19-29",
+  "phone": "092-475-0052",
+  "website": "https://corp.josuian.jp/",
+  "note": "博多駅前本店のみ利用可(他の如水庵店舗は不可)",
+  "lat": 33.591972,
+  "lon": 130.416885,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前2-19-29"
+  }
+ },
+ {
+  "id": "hop-9e0695",
+  "name": "隆興担々麺房",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-122",
+  "phone": "092-400-1686",
+  "website": "https://www.instagram.com/ryukoutanntannmennbou/",
+  "note": null,
+  "lat": 33.597187,
+  "lon": 130.411774,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-122"
+  }
+ },
+ {
+  "id": "hop-b549b5",
+  "name": "増田クリーニング店",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区中呉服町1-15",
+  "phone": "092-291-8189",
+  "website": null,
+  "note": null,
+  "lat": 33.598984,
+  "lon": 130.409897,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町1-15"
+  }
+ },
+ {
+  "id": "hop-8cab18",
+  "name": "なのに",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-23 2F",
+  "phone": "092-688-6521",
+  "website": "https://hakata-nanoni.com/",
+  "note": null,
+  "lat": 33.597675,
+  "lon": 130.411591,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-23"
+  }
+ },
+ {
+  "id": "hop-15ccf2",
+  "name": "食処 笑ん",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町10-204",
+  "phone": "092-262-1780",
+  "website": "https://www.gokusho.info/map/gourmet/en.html",
+  "note": null,
+  "lat": 33.597874,
+  "lon": 130.410461,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町10-204"
+  }
+ },
+ {
+  "id": "hop-0ad169",
+  "name": "桶や商店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-2",
+  "phone": null,
+  "website": "https://www.instagram.com/okeya.s717/",
+  "note": "営業日は火・水・木・金曜",
+  "lat": 33.596657,
+  "lon": 130.412003,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-2"
+  }
+ },
+ {
+  "id": "hop-7c55b8",
+  "name": "梨庵",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町3-17-5",
+  "phone": "092-262-1661",
+  "website": "https://www.instagram.com/rian0922621661/",
+  "note": null,
+  "lat": 33.595341,
+  "lon": 130.413208,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町3-17-5"
+  }
+ },
+ {
+  "id": "hop-27434f",
+  "name": "堺整骨院 大博通り院",
+  "category": "健康・医療",
+  "tags": [],
+  "address": "福岡市博多区御供所町4-3-102",
+  "phone": "092-283-2004",
+  "website": "https://fukuoka-seikotsuin.com/taihaku-st/",
+  "note": null,
+  "lat": 33.595829,
+  "lon": 130.412552,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町4-3-102"
+  }
+ },
+ {
+  "id": "hop-f2769e",
+  "name": "奥村商店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区中呉服町2-24",
+  "phone": "092-291-5043",
+  "website": "https://okumura-shoten.com/",
+  "note": null,
+  "lat": 33.598709,
+  "lon": 130.409409,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町2-24"
+  }
+ },
+ {
+  "id": "hop-3738c2",
+  "name": "洋食ビストロむろ屋",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区中呉服町2-9 秋吉第一ビル2階",
+  "phone": "092-272-4668",
+  "website": "https://bistro-muroya.com/",
+  "note": null,
+  "lat": 33.598995,
+  "lon": 130.409058,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町2-9"
+  }
+ },
+ {
+  "id": "hop-e73a13",
+  "name": "日奈丸食道",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区中呉服町9-5 妙典寺ビル1階",
+  "phone": "092-980-7820",
+  "website": "https://hinamaru-shokudo.shopinfo.jp/",
+  "note": null,
+  "lat": 33.599987,
+  "lon": 130.411545,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町9-5"
+  }
+ },
+ {
+  "id": "hop-ec1333",
+  "name": "蕎麦 なが田",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町3-17-4 博多町家ロジハウス2F",
+  "phone": "092-986-4593",
+  "website": "https://www.gokusho.info/map/gourmet/nagata.html",
+  "note": null,
+  "lat": 33.595341,
+  "lon": 130.413208,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町3-17-4"
+  }
+ },
+ {
+  "id": "hop-f48782",
+  "name": "鰻の成瀬 博多呉服町店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-121",
+  "phone": "092-985-7628",
+  "website": "https://unagi-naruse-hakatagofukumachi.owst.jp/",
+  "note": null,
+  "lat": 33.597187,
+  "lon": 130.411774,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-121"
+  }
+ },
+ {
+  "id": "hop-e2f69a",
+  "name": "西門蒲鉾本店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区上呉服町5-172",
+  "phone": "092-291-2466",
+  "website": "https://saimon-kamaboko.com/",
+  "note": null,
+  "lat": 33.598583,
+  "lon": 130.412537,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町5-172"
+  }
+ },
+ {
+  "id": "hop-23d829",
+  "name": "焼鳥酒場 くるくる",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区店屋町3-8",
+  "phone": "092-272-0175",
+  "website": "https://tabelog.com/fukuoka/A4001/A400106/40054188/",
+  "note": null,
+  "lat": 33.595066,
+  "lon": 130.410019,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区店屋町3-8"
+  }
+ },
+ {
+  "id": "hop-1f01e5",
+  "name": "バルバ ビアンカ Barba Bianca",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-116",
+  "phone": "092-283-3330",
+  "website": "https://www.barba-bianca.com/",
+  "note": null,
+  "lat": 33.597187,
+  "lon": 130.411774,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-116"
+  }
+ },
+ {
+  "id": "hop-1bf0a7",
+  "name": "鎌田製作所",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町5-7",
+  "phone": "092-710-7907",
+  "website": "https://www.instagram.com/kamataseisakusho/",
+  "note": null,
+  "lat": 33.596325,
+  "lon": 130.412415,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町5-7"
+  }
+ },
+ {
+  "id": "hop-315792",
+  "name": "原口園",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1丁目29-55",
+  "phone": "092-431-4018",
+  "website": "https://haraguchien.co.jp/",
+  "note": null,
+  "lat": 33.594501,
+  "lon": 130.41745,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-29-55"
+  }
+ },
+ {
+  "id": "hop-f0b042",
+  "name": "カフェ・ヴェール",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-211",
+  "phone": "092-283-7573",
+  "website": "https://www.gokusho.info/map/gourmet/cafe-vert.html",
+  "note": null,
+  "lat": 33.59848,
+  "lon": 130.411102,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-211"
+  }
+ },
+ {
+  "id": "hop-951217",
+  "name": "旬魚 和らべ",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区店屋町6-2",
+  "phone": "050-5487-3485",
+  "website": "https://fbgw600.gorp.jp/",
+  "note": null,
+  "lat": 33.596081,
+  "lon": 130.409393,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区店屋町6-2"
+  }
+ },
+ {
+  "id": "hop-2e74ad",
+  "name": "昭和大衆酒場 てくてく屋",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町1-18 リビング博多ビル B1F",
+  "phone": "092-292-4404",
+  "website": "https://hitosara.com/0004044237/",
+  "note": null,
+  "lat": 33.594585,
+  "lon": 130.415421,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町1-18"
+  }
+ },
+ {
+  "id": "hop-025422",
+  "name": "mazzone(マッツォーネ)",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-23-8",
+  "phone": "092-710-5188",
+  "website": "https://hitosara.com/0006085876/",
+  "note": null,
+  "lat": 33.594131,
+  "lon": 130.418304,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-8"
+  }
+ },
+ {
+  "id": "hop-682ce2",
+  "name": "huit(ユイット) BAG TOTAL REPAIR",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区中呉服町4-5 A-101",
+  "phone": "092-260-3484",
+  "website": "https://www.bag-repair.jp/",
+  "note": null,
+  "lat": 33.599049,
+  "lon": 130.409943,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区中呉服町4-5"
+  }
+ },
+ {
+  "id": "hop-220e00",
+  "name": "焼鳥 紘 呉服町店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-23 1F",
+  "phone": "092-282-4646",
+  "website": "https://www.instagram.com/yakitori_hro/",
+  "note": null,
+  "lat": 33.597675,
+  "lon": 130.411591,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-23"
+  }
+ },
+ {
+  "id": "hop-56a4d5",
+  "name": "ココカラファイン 呉服町店",
+  "category": "小売・販売",
+  "tags": [
+   "ドラッグストア"
+  ],
+  "address": "福岡市博多区上呉服町10-10 呉服町ビジネスセンタ 地下1F",
+  "phone": "092-282-6222",
+  "website": "https://www.matsukiyococokara-online.com/map?kid=20001476",
+  "note": null,
+  "lat": 33.597832,
+  "lon": 130.409943,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町10-10"
+  }
+ },
+ {
+  "id": "hop-9c9ec6",
+  "name": "石堂橋 白つぐ",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町2-40",
+  "phone": "092-400-3569",
+  "website": "https://shiratsugu.co.jp/",
+  "note": null,
+  "lat": 33.595844,
+  "lon": 130.414001,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町2-40"
+  }
+ },
+ {
+  "id": "hop-901fc4",
+  "name": "島本 博多駅前店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区御供所町2-63",
+  "phone": "092-291-2771",
+  "website": "https://www.simamoto.co.jp/",
+  "note": null,
+  "lat": 33.594418,
+  "lon": 130.414474,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町2-63"
+  }
+ },
+ {
+  "id": "hop-0fec11",
+  "name": "博多うま馬 祇園店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区祇園町1-26",
+  "phone": "092-271-4025",
+  "website": "http://www.hakataumauma.com/pc/store/shop.php?id=1354851511",
+  "note": null,
+  "lat": 33.593624,
+  "lon": 130.413651,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区祇園町1-26"
+  }
+ },
+ {
+  "id": "hop-399d9e",
+  "name": "博多うま馬 冷泉店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区冷泉町9-19",
+  "phone": "092-283-1015",
+  "website": "http://www.hakataumauma.com/pc/store/shop.php?id=1354855698",
+  "note": null,
+  "lat": 33.595432,
+  "lon": 130.411087,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区冷泉町9-19"
+  }
+ },
+ {
+  "id": "hop-898a2a",
+  "name": "博多奥堂",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町5-29",
+  "phone": "092-291-6511",
+  "website": "https://hakata-okunodou.co.jp/",
+  "note": null,
+  "lat": 33.596031,
+  "lon": 130.41304,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町5-29"
+  }
+ },
+ {
+  "id": "hop-fde3ef",
+  "name": "支那そば 月や",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区店屋町2-21",
+  "phone": "092-261-5001",
+  "website": "https://tsuki-ya.net/",
+  "note": "本店(店屋町)のみ利用可(他の月や店舗は不可)",
+  "lat": 33.596249,
+  "lon": 130.409729,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区店屋町2-21"
+  }
+ },
+ {
+  "id": "hop-cde646",
+  "name": "ジョイントバル TREASURE",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町1-34 SYA-HOTEL 1F",
+  "phone": "092-791-6816",
+  "website": "https://www.instagram.com/grandfre_7/",
+  "note": null,
+  "lat": 33.596798,
+  "lon": 130.411346,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町1-34"
+  }
+ },
+ {
+  "id": "hop-da54c4",
+  "name": "旬彩旬味 燈明",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-31-1",
+  "phone": "092-262-7112",
+  "website": "https://akr7804388851.owst.jp/",
+  "note": "夜限定で利用可",
+  "lat": 33.597187,
+  "lon": 130.412231,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-31-1"
+  }
+ },
+ {
+  "id": "hop-aa739b",
+  "name": "樋口精肉店",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区御供所町5-8 グレイス祇園1F",
+  "phone": "092-271-2727",
+  "website": "https://www.e2983.com/",
+  "note": null,
+  "lat": 33.596386,
+  "lon": 130.412338,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町5-8"
+  }
+ },
+ {
+  "id": "hop-0a9dbe",
+  "name": "有限会社文工房",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区上呉服町6-5",
+  "phone": "092-282-6922",
+  "website": null,
+  "note": null,
+  "lat": 33.59803,
+  "lon": 130.412415,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町6-5"
+  }
+ },
+ {
+  "id": "hop-66258b",
+  "name": "オートザッケ",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区上呉服町6-31",
+  "phone": null,
+  "website": null,
+  "note": null,
+  "lat": 33.597904,
+  "lon": 130.412857,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町6-31"
+  }
+ },
+ {
+  "id": "hop-ee6e65",
+  "name": "ふじ松",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-11",
+  "phone": "092-281-1652",
+  "website": "https://www.gokusho.info/map/gourmet/fujimatsu.html",
+  "note": null,
+  "lat": 33.598545,
+  "lon": 130.410568,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-11"
+  }
+ },
+ {
+  "id": "hop-3cbb27",
+  "name": "蕎麦前 ひな",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区御供所町2-58",
+  "phone": "092-272-1377",
+  "website": "https://tabelog.com/fukuoka/A4001/A400101/40064733/",
+  "note": null,
+  "lat": 33.594662,
+  "lon": 130.414917,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町2-58"
+  }
+ },
+ {
+  "id": "hop-a007fe",
+  "name": "博多茶くら",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-24-14",
+  "phone": "092-431-3272",
+  "website": "https://www.hakatasakura.com/",
+  "note": null,
+  "lat": 33.595066,
+  "lon": 130.419464,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-24-14"
+  }
+ },
+ {
+  "id": "hop-b6b10d",
+  "name": "タロー写真館",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1丁目29-53",
+  "phone": "092-431-3800",
+  "website": "http://www.photo-familiar.com/",
+  "note": null,
+  "lat": 33.594631,
+  "lon": 130.417603,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-29-53"
+  }
+ },
+ {
+  "id": "hop-55d1be",
+  "name": "てんぷら にってん",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区博多駅前2丁目9-28",
+  "phone": "092-441-2578",
+  "website": "https://www.instagram.com/hakatatempura_nitten/",
+  "note": null,
+  "lat": 33.591705,
+  "lon": 130.414322,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前2-9-28"
+  }
+ },
+ {
+  "id": "hop-27c2ff",
+  "name": "メゾンハコシマ",
+  "category": "ジュエリー・ファッション",
+  "tags": [],
+  "address": "福岡市博多区御供所町12-2 1F",
+  "phone": "092-984-0721",
+  "website": "https://www.instagram.com/hakoshima_japon/",
+  "note": null,
+  "lat": 33.595791,
+  "lon": 130.414185,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町12-2"
+  }
+ },
+ {
+  "id": "hop-4ca1fd",
+  "name": "セブン-イレブン 博多駅前1丁目店",
+  "category": "小売・販売",
+  "tags": [
+   "コンビニ"
+  ],
+  "address": "福岡市博多区博多駅前1丁目13番1号",
+  "phone": "092-482-5486",
+  "website": "https://www.sej.co.jp/",
+  "note": "利用可能なのは博多駅前1丁目店と博多出来町通り店のみ",
+  "lat": 33.592407,
+  "lon": 130.418884,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-13-1"
+  }
+ },
+ {
+  "id": "hop-ed8e95",
+  "name": "セブン-イレブン 博多出来町通り店",
+  "category": "小売・販売",
+  "tags": [
+   "コンビニ"
+  ],
+  "address": "福岡市博多区博多駅前1丁目23-17",
+  "phone": "092-481-9323",
+  "website": "https://www.sej.co.jp/",
+  "note": "利用可能なのは博多駅前1丁目店と博多出来町通り店のみ",
+  "lat": 33.594746,
+  "lon": 130.418961,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-17"
+  }
+ },
+ {
+  "id": "hop-bbbbd5",
+  "name": "珈琲と麦酒",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町5-175",
+  "phone": "090-1191-9758",
+  "website": "https://www.instagram.com/hakata_coffee_to_bakusyu/",
+  "note": null,
+  "lat": 33.598583,
+  "lon": 130.412537,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町5-175"
+  }
+ },
+ {
+  "id": "hop-269717",
+  "name": "お数や はち椀",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区冷泉町6-2 1F",
+  "phone": "092-271-0081",
+  "website": "https://www.instagram.com/okazuya_hachiwan/",
+  "note": null,
+  "lat": 33.594032,
+  "lon": 130.412048,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区冷泉町6-2"
+  }
+ },
+ {
+  "id": "hop-60d4fb",
+  "name": "はかた伝統工芸館",
+  "category": "その他",
+  "tags": [],
+  "address": "福岡市博多区博多駅前1-23-2 Park Front 博多駅前一丁目1階",
+  "phone": "092-409-5450",
+  "website": "https://hakata-dentou-kougeikan.jp/",
+  "note": null,
+  "lat": 33.593727,
+  "lon": 130.418121,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区博多駅前1-23-2"
+  }
+ },
+ {
+  "id": "hop-eb1a16",
+  "name": "オレズ マガラズ 須崎店",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区須崎1-9",
+  "phone": "092-282-3035",
+  "website": "https://tabelog.com/fukuoka/A4001/A400102/40031144/",
+  "note": null,
+  "lat": 33.596863,
+  "lon": 130.402405,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区須崎1-9"
+  }
+ },
+ {
+  "id": "hop-85923f",
+  "name": "スナックあいこ(バー)",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町5-175",
+  "phone": null,
+  "website": "https://www.gokusho.info/map/gourmet/cafe-and-beer.html",
+  "note": null,
+  "lat": 33.598583,
+  "lon": 130.412537,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町5-175"
+  }
+ },
+ {
+  "id": "hop-f5de90",
+  "name": "みゃびカレー",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町5-175 2F",
+  "phone": "070-9172-9170",
+  "website": "https://www.instagram.com/fmc_myabicurry/",
+  "note": "珈琲と麦酒の2階",
+  "lat": 33.598583,
+  "lon": 130.412537,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町5-175"
+  }
+ },
+ {
+  "id": "hop-31f641",
+  "name": "La Campana Hakata Wine Shop",
+  "category": "小売・販売",
+  "tags": [],
+  "address": "福岡市博多区御供所町4-8 ギャラン御供所101",
+  "phone": "092-627-7262",
+  "website": "https://www.instagram.com/lacampanahakata",
+  "note": null,
+  "lat": 33.596054,
+  "lon": 130.412262,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町4-8"
+  }
+ },
+ {
+  "id": "hop-32d834",
+  "name": "さゆりばぁば亭",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町1-34",
+  "phone": "092-272-2772",
+  "website": "https://sayuri-tei.com/",
+  "note": null,
+  "lat": 33.596798,
+  "lon": 130.411346,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町1-34"
+  }
+ },
+ {
+  "id": "hop-855215",
+  "name": "お料理 ろく",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町11-7",
+  "phone": "092-292-9955",
+  "website": "https://www.instagram.com/oryori_roku6",
+  "note": null,
+  "lat": 33.598309,
+  "lon": 130.410889,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町11-7"
+  }
+ },
+ {
+  "id": "hop-dbdc79",
+  "name": "LemonP(レモンプ)",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町2-24 HOTEL COCO呉服町1階",
+  "phone": "070-1518-1765",
+  "website": "https://www.instagram.com/lemonp_hakata1",
+  "note": null,
+  "lat": 33.597614,
+  "lon": 130.411682,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町2-24"
+  }
+ },
+ {
+  "id": "hop-fe826f",
+  "name": "ファミリーマート博多大博通り店",
+  "category": "小売・販売",
+  "tags": [
+   "コンビニ"
+  ],
+  "address": "福岡市博多区御供所町4-8",
+  "phone": "092-283-3801",
+  "website": "https://store.family.co.jp/points/71076",
+  "note": "博多大博通り店のみ利用可(他のファミリーマートは不可)",
+  "lat": 33.596054,
+  "lon": 130.412262,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区御供所町4-8"
+  }
+ },
+ {
+  "id": "hop-d49ce3",
+  "name": "福岡ダイビングのお店 la chobi",
+  "category": "サービス",
+  "tags": [],
+  "address": "福岡市博多区上呉服町10-27",
+  "phone": "092-292-4363",
+  "website": "https://lachobi.com/",
+  "note": null,
+  "lat": 33.598167,
+  "lon": 130.410965,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町10-27"
+  }
+ },
+ {
+  "id": "hop-61a2e1",
+  "name": "博多酒房花笑",
+  "category": "飲食",
+  "tags": [],
+  "address": "福岡市博多区上呉服町3-4 2F",
+  "phone": "092-285-2460",
+  "website": "https://www.instagram.com/hakata_8783",
+  "note": null,
+  "lat": 33.597149,
+  "lon": 130.412384,
+  "geocode": {
+   "method": "gsi",
+   "query": "福岡県福岡市博多区上呉服町3-4"
+  }
+ }
+]

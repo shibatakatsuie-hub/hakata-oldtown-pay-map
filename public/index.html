@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>博多旧市街PAY 加盟店マップ（非公式）</title>
+  <meta name="description" content="博多旧市街PAYの利用可能店舗を地図で探せる、非公式の加盟店検索サービスです。">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:,">
+  <!-- 地図ライブラリ（CDN）。自前配信にする手順は README を参照 -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-row">
+      <h1>博多旧市街PAY 加盟店マップ</h1>
+      <button id="about-btn" class="link-btn" type="button">このサイトについて</button>
+    </div>
+    <p class="unofficial" role="note">
+      本サイトは非公式の加盟店検索サービスです。<a id="official-link" href="https://hakata-oldtownpay.com/" target="_blank" rel="noopener noreferrer">公式サイト</a>
+    </p>
+    <div class="controls">
+      <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off"
+             placeholder="店名・住所で検索" aria-label="店名・住所で検索">
+      <button id="locate" class="btn-locate" type="button">現在地</button>
+      <select id="radius" aria-label="現在地からの距離" disabled>
+        <option value="">距離</option>
+        <option value="500">500m以内</option>
+        <option value="1000">1km以内</option>
+        <option value="2000">2km以内</option>
+      </select>
+    </div>
+    <div id="chips" class="chips" role="group" aria-label="カテゴリで絞り込み"></div>
+  </header>
+
+  <main>
+    <div id="map" role="region" aria-label="加盟店の地図"></div>
+    <section id="sheet" class="sheet" data-state="peek" aria-label="店舗一覧">
+      <button id="sheet-handle" class="handle" type="button" aria-expanded="false" aria-controls="list">
+        <span class="grip" aria-hidden="true"></span>
+        <span id="count" class="count">読み込み中…</span>
+      </button>
+      <p class="notice">店舗により参加日が異なります。ご利用前に各店舗へご確認ください。営業時間はGoogleマップでご確認いただけます。</p>
+      <ul id="list" class="list"></ul>
+    </section>
+  </main>
+
+  <dialog id="about" aria-labelledby="about-title">
+    <form method="dialog" class="about-body">
+      <h2 id="about-title">このサイトについて</h2>
+      <p><strong>本サイトは非公式の加盟店検索サービスです。</strong>博多旧市街PAYの発行者（御供所名店会）や運営事務局とは関係がありません。</p>
+      <dl id="about-source"></dl>
+      <ul class="about-list">
+        <li>掲載内容は取得時点のものです。加盟状況・利用条件は店舗ごとに異なり、変更される場合があります。最新情報は公式サイトと各店舗でご確認ください。</li>
+        <li>営業時間・混雑・口コミは掲載していません。各店の「Googleマップ」ボタンから確認できます。</li>
+        <li>地図データ © OpenStreetMap contributors。位置情報（現在地）はお使いの端末内でのみ距離計算に使い、外部へ送信しません。</li>
+        <li>誤りやお気づきの点がありましたら、運営者までご連絡ください。</li>
+      </ul>
+      <button class="btn primary" value="close">閉じる</button>
+    </form>
+  </dialog>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="noscript">このサイトの利用には JavaScript が必要です。</p></noscript>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+  <script src="lib.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
