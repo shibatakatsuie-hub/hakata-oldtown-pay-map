@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>博多旧市街PAY 加盟店マップ（非公式）</title>
-  <meta name="description" content="博多旧市街PAYの利用可能店舗を地図で探せる、非公式の加盟店検索サービスです。">
+  <title>プレミアム商品券 加盟店マップ（非公式）</title>
+  <meta name="description" content="プレミアム商品券・地域Payの利用可能店舗を地図で探せる、非公式の加盟店検索サービスです。">
   <meta name="color-scheme" content="light dark">
   <link rel="icon" href="data:,">
   <!-- 地図ライブラリ（CDN）。自前配信にする手順は README を参照 -->
@@ -16,12 +16,16 @@
 <body>
   <header class="top">
     <div class="top-row">
-      <h1>博多旧市街PAY 加盟店マップ</h1>
+      <h1 id="title">加盟店マップ</h1>
       <button id="about-btn" class="link-btn" type="button">このサイトについて</button>
     </div>
     <p class="unofficial" role="note">
       本サイトは非公式の加盟店検索サービスです。<a id="official-link" href="https://hakata-oldtownpay.com/" target="_blank" rel="noopener noreferrer">公式サイト</a>
     </p>
+    <div id="program-row" class="program-row" hidden>
+      <label for="program">券・地域</label>
+      <select id="program"></select>
+    </div>
     <div class="controls">
       <input id="q" type="search" inputmode="search" enterkeyhint="search" autocomplete="off"
              placeholder="店名・住所で検索" aria-label="店名・住所で検索">
@@ -34,6 +38,12 @@
       </select>
     </div>
     <div id="chips" class="chips" role="group" aria-label="カテゴリで絞り込み"></div>
+    <div id="when-fields" class="when-fields" hidden>
+      <input id="when-date" type="date" aria-label="日付">
+      <select id="when-time" aria-label="時刻（30分単位）"></select>
+      <button id="when-now" class="btn" type="button">いまに戻す</button>
+      <p class="fine">指定した日時に営業している店を表示します。祝日・臨時休業は反映されません。</p>
+    </div>
   </header>
 
   <main>
@@ -43,7 +53,7 @@
         <span class="grip" aria-hidden="true"></span>
         <span id="count" class="count">読み込み中…</span>
       </button>
-      <p class="notice">店舗により参加日が異なります。ご利用前に各店舗へご確認ください。営業時間はGoogleマップでご確認いただけます。</p>
+      <p id="notice" class="notice"></p>
       <ul id="list" class="list"></ul>
     </section>
   </main>
@@ -51,7 +61,7 @@
   <dialog id="about" aria-labelledby="about-title">
     <form method="dialog" class="about-body">
       <h2 id="about-title">このサイトについて</h2>
-      <p><strong>本サイトは非公式の加盟店検索サービスです。</strong>博多旧市街PAYの発行者（御供所名店会）や運営事務局とは関係がありません。</p>
+      <p><strong>本サイトは非公式の加盟店検索サービスです。</strong>各券の発行者・運営事務局とは関係がありません。</p>
       <dl id="about-source"></dl>
       <ul class="about-list">
         <li>掲載内容は取得時点のものです。加盟状況・利用条件は店舗ごとに異なり、変更される場合があります。最新情報は公式サイトと各店舗でご確認ください。</li>

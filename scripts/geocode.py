@@ -50,13 +50,20 @@ def town_name(query):
     return m.group(1) if m else ""
 
 
+def ward_name(query):
+    """'福岡県福岡市中央区春吉1-7' → '福岡市中央区'。区が読めなければ '福岡市'。"""
+    m = re.search(r"福岡市(.+?区)", query)
+    return "福岡市" + m.group(1) if m else "福岡市"
+
+
 def pick(features, query):
-    """API結果から、同じ町名を含む最初の候補を選ぶ。"""
+    """API結果から、同じ市区・同じ町名を含む最初の候補を選ぶ（別の区の同名地名を拾わない）。"""
     town = town_name(query)
+    ward = ward_name(query)
     for f in features or []:
         title = (f.get("properties") or {}).get("title", "")
         coords = (f.get("geometry") or {}).get("coordinates")
-        if "福岡市博多区" in title and town in title and coords and len(coords) >= 2:
+        if ward in title and town in title and coords and len(coords) >= 2:
             return {"lat": round(coords[1], 6), "lon": round(coords[0], 6), "matched_title": title}
     return None
 

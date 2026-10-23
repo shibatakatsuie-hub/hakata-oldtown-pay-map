@@ -1,6 +1,6 @@
-# CLAUDE.md — 博多旧市街PAY 加盟店マップ
+# CLAUDE.md — プレミアム商品券 加盟店マップ（非公式）
 
-非公式の加盟店検索サイト。静的サイト（public/）+ JSON。サーバなし、無料運用、スマホ中心。
+複数の券（博多旧市街PAY、中洲がんばっとう2026 など）を扱う、非公式の加盟店検索サイト。静的サイト（public/）+ JSON。サーバなし、無料運用、スマホ中心。
 
 ## 守ること
 
@@ -39,8 +39,9 @@ CSV の列: `name, category, address, phone, website, note, tags, hours, hours_n
 - 座標が福岡市周辺の範囲外ならエラー（build_data.py が検出）。
 - 同名・同住所の重複行はエラー。支店は店名に支店名を含める。
 
-## 新しい地域（プログラム）を足す
+## 新しい券（プログラム）を足す
 
-1. `config/programs.json` に項目を追加（`id`, `source_url`, `raw_csv`, `file`, `map_center` など）
-2. `raw/<id>.csv` を作る
-3. `python3 scripts/build_data.py`。画面は `?program=<id>` で切り替わる。
+1. `config/programs.json` に項目を追加（`id`, `source_url`, `raw_csv`, `file`, `map_center`, `notice` など。利用期間が不明なら `valid_from`/`valid_to` は null）
+2. `raw/<id>.csv` を作る（住所は市区から。電話は `092-123-4567` 形式）
+3. `python3 scripts/geocode.py` → `python3 scripts/build_data.py --strict`。画面の「券・地域」と `?program=<id>` で切り替わる。
+4. 公式ページから取れなかった情報（利用期間、電子版/冊子版の別 など）は、推測で埋めず、`notice` と `license_note` に「不明」と明記する。

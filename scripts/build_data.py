@@ -127,14 +127,17 @@ def main():
             print(f"  WARN   ...ほか {len(warnings) - 10} 件")
         if shops is None:
             failed = True
+            if not errors:
+                print("  → --strict のため、上の WARN をエラー扱いにして停止しました。")
+                print("    座標未設定の場合は、先に python3 scripts/geocode.py（Windows は py scripts/geocode.py）を実行してください。")
             continue
         with_coords = sum(1 for s in shops if s["lat"] is not None)
         print(f"  OK     {len(shops)} 店舗（座標あり {with_coords}）→ public/data/{program['file']}")
         meta = {
-            k: program[k]
+            k: program.get(k)
             for k in (
                 "id", "name", "issuer", "area", "source_name", "source_url", "official_url",
-                "source_retrieved_at", "valid_from", "valid_to", "file", "map_center", "map_zoom",
+                "source_retrieved_at", "valid_from", "valid_to", "notice", "file", "map_center", "map_zoom",
             )
         }
         meta["shop_count"] = len(shops)

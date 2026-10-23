@@ -94,6 +94,21 @@ assert.deepEqual(rows7.filter(r => r.today).map(r => r.label), ['水']);
 assert.equal(Lib.formatSpans([['00:00', '24:00']]), '00:00〜24:00', '24:00 は翌0:00 と表示しない');
 assert.equal(Lib.formatSpans([['18:00', '26:30']]), '18:00〜翌2:30');
 
+// ---- 日時の指定（30分単位）----
+assert.equal(Lib.jstYMD(new Date('2026-10-21T16:00:00Z')), '2026-10-22', 'UTC 16:00 は日本では翌日 01:00');
+assert.equal(Lib.floorTo30(at('2026-10-22T12:47:00')), '12:30');
+assert.equal(Lib.floorTo30(at('2026-10-22T00:05:00')), '00:00');
+assert.equal(Lib.floorTo30(at('2026-10-22T23:59:00')), '23:30');
+const custom = Lib.makeJstDate('2026-10-24', '23:30'); // 土曜 23:30
+assert.equal(Lib.formatWhen(custom), '10/24(土) 23:30');
+assert.equal(Lib.dayLabel(custom), '10/24(土)');
+assert.deepEqual(Lib.openStatus(wk, custom), { state: 'open', closesAt: '02:00' }, '土曜の深夜営業');
+assert.deepEqual(Lib.openStatus(wk, Lib.makeJstDate('2026-10-25', '00:30')), { state: 'open', closesAt: '02:00' }, '日曜0:30は前日の続き');
+assert.deepEqual(Lib.openStatus(wk, Lib.makeJstDate('2026-10-25', '02:00')), { state: 'closed' });
+assert.equal(Lib.todayText(wk, custom), '18:00〜翌2:00');
+assert.equal(Lib.makeJstDate('2026-13-45', '10:00'), null);
+assert.equal(Lib.makeJstDate('', '10:00'), null);
+assert.equal(Lib.makeJstDate('2026-10-24', '9:00'), null);
 // 営業中フィルタ: 営業時間不明の店は含めない
 const hoursShops = [
   Object.assign({}, shops[0], { hours: wk }),
@@ -103,6 +118,11 @@ rows = Lib.selectShops(hoursShops, { query: '', facet: { type: 'all' }, radiusM:
 assert.deepEqual(rows.map(r => r.shop.id), ['a']);
 rows = Lib.selectShops(hoursShops, { query: '', facet: { type: 'all' }, radiusM: null, origin: null, openNow: true, now: at('2026-10-21T15:00:00') });
 assert.equal(rows.length, 0);
+// 指定日時での絞り込み
+rows = Lib.selectShops(hoursShops, { query: '', facet: { type: 'all' }, radiusM: null, origin: null, openNow: true, now: custom });
+assert.deepEqual(rows.map(r => r.shop.id), ['a']);
+rows = Lib.selectShops(hoursShops, { query: '', facet: { type: 'all' }, radiusM: null, origin: null, openNow: true, now: Lib.makeJstDate('2026-10-25', '12:00') });
+assert.equal(rows.length, 0, '日曜昼は定休日');
 
 // 実データの整合性（public/data が生成済みの場合のみ）
 const dataPath = path.join(__dirname, '..', 'public', 'data', 'hakata-oldtown-pay.json');

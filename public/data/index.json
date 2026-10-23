@@ -11,6 +11,7 @@
    "source_retrieved_at": "2026-10-21",
    "valid_from": "2026-08-07",
    "valid_to": "2026-12-31",
+   "notice": "店舗により参加日が異なり、発売開始後でも利用準備が整っていない場合があります。",
    "file": "hakata-oldtown-pay.json",
    "map_center": [
     33.5905,
@@ -18,7 +19,28 @@
    ],
    "map_zoom": 15,
    "shop_count": 76,
-   "generated_at": "2026-10-22"
+   "generated_at": "2026-10-23"
+  },
+  {
+   "id": "nakasu-ganbattou-2026",
+   "name": "中洲がんばっとう2026",
+   "issuer": "中洲町連合会",
+   "area": "福岡市博多区中洲（1〜5丁目）と周辺エリア",
+   "source_name": "中洲がんばっとう2026（中洲町連合会）",
+   "source_url": "https://nakasuchorengoukai.com/ganbattou2026",
+   "official_url": "https://nakasuchorengoukai.com/ganbattou2026",
+   "source_retrieved_at": "2026-10-23",
+   "valid_from": null,
+   "valid_to": null,
+   "notice": "「電子版が使える店舗」と「冊子版が使える店舗」があります。どちらの券が使えるかは店舗ごとに異なる場合があるため、ご利用前に店舗へご確認ください。",
+   "file": "nakasu-ganbattou-2026.json",
+   "map_center": [
+    33.5917,
+    130.406
+   ],
+   "map_zoom": 16,
+   "shop_count": 83,
+   "generated_at": "2026-10-23"
   }
  ]
 }

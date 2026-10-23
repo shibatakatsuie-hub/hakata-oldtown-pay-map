@@ -18,6 +18,7 @@
     '小売・販売': '#1971c2',
     'サービス': '#2b8a3e',
     '美容・エステ': '#c2255c',
+    'スナック・バー': '#9c36b5',
     'ジュエリー・ファッション': '#a61e4d',
     '健康・医療': '#0b7285',
     'その他': '#5c6b7a'
@@ -31,6 +32,9 @@
     query: '',
     radiusM: null,
     openOnly: false,
+    whenOn: false,   // 「日時を指定」が有効か
+    when: null,      // 指定した日時（Date）。null のときは現在時刻
+
     origin: null,
     distances: {}
   };
@@ -57,6 +61,9 @@
     });
     return e;
   }
+
+  /** 営業判定の基準時刻。日時を指定していればその時刻、なければ現在。 */
+  function currentWhen() { return state.when || new Date(); }
 
   function colorOf(category) { return CATEGORY_COLORS[category] || CATEGORY_COLORS['その他']; }
 
@@ -100,7 +107,8 @@
     var badge = null;
     if (st.state === 'open') { badge = h('span', { class: 'status open', text: '営業中 〜' + st.closesAt }); }
     else if (st.state === 'closed') { badge = h('span', { class: 'status closed', text: '営業時間外' }); }
-    return h('p', { class: 'hours-line' }, [badge, h('span', { text: '本日 ' + Lib.todayText(shop.hours, now) })]);
+    var dayWord = state.when ? Lib.dayLabel(now) : '本日';
+    return h('p', { class: 'hours-line' }, [badge, h('span', { text: dayWord + ' ' + Lib.todayText(shop.hours, now) })]);
   }
 
   /** 週間の営業時間（折りたたみ）。確認日と注意書き付き。 */
@@ -128,7 +136,7 @@
 
   function buildPopup(shop) {
     var d = state.distances[shop.id];
-    var now = new Date();
+    var now = currentWhen();
     return h('div', { class: 'pop' }, [
       shopImage(shop, 'pop-img'),
       shop.image ? h('p', { class: 'credit', text: '写真: ' + shop.image.credit }) : null,
@@ -204,7 +212,7 @@
       actions.push(h('a', { class: 'btn', href: s.website, target: '_blank', rel: 'noopener noreferrer', text: '店舗サイト' }));
     }
 
-    var now = new Date();
+    var now = currentWhen();
     var body = h('div', { class: 'shop-body' }, [
       h('div', { class: 'shop-head' }, [
         h('h3', { class: 'shop-name', text: s.name }),
@@ -238,18 +246,55 @@
   function render(fit) {
     var rows = Lib.selectShops(state.shops, {
       query: state.query, facet: state.facet, radiusM: state.radiusM, origin: state.origin,
-      openNow: state.openOnly, now: new Date()
+      openNow: state.openOnly, now: currentWhen()
     });
     state.distances = {};
     rows.forEach(function (r) { if (r.distance != null) { state.distances[r.shop.id] = r.distance; } });
 
     var total = state.shops.length;
     els.count.textContent = (rows.length === total ? total + '店舗' : rows.length + ' / ' + total + '店舗') +
-      (state.origin ? '（現在地から近い順）' : '') +
-      (state.openOnly ? '（営業中のみ）' : '');
+      (state.origin ? '（現在地から近い順）' : '') + openSuffix();
     renderList(rows);
     renderMarkers(rows);
     if (fit) { fitToMarkers(); }
+  }
+
+  function openSuffix() {
+    var when = state.when ? Lib.formatWhen(state.when) : '';
+    if (state.openOnly) { return when ? '（' + when + ' に営業中）' : '（営業中のみ）'; }
+    return when ? '（' + when + ' の営業状況を表示）' : '';
+  }
+
+  /* ---------- 日時の指定（30分単位） ---------- */
+  function fillTimeOptions() {
+    for (var m = 0; m < 48; m++) {
+      var t = String(Math.floor(m / 2)).padStart(2, '0') + ':' + (m % 2 ? '30' : '00');
+      els.whenTime.appendChild(h('option', { value: t, text: t }));
+    }
+  }
+
+  function setWhenInputsToNow() {
+    var now = new Date();
+    els.whenDate.value = Lib.jstYMD(now);
+    els.whenTime.value = Lib.floorTo30(now);
+  }
+
+  function applyWhen() {
+    state.when = Lib.makeJstDate(els.whenDate.value, els.whenTime.value);
+  }
+
+  function toggleWhen() {
+    state.whenOn = !state.whenOn;
+    els.whenFields.hidden = !state.whenOn;
+    if (state.whenOn) {
+      if (!els.whenDate.value) { setWhenInputsToNow(); }
+      applyWhen();
+      state.openOnly = true; // 日時を指定したら、その時間に営業中の店に絞る（チップで解除できる）
+    } else {
+      state.when = null;
+    }
+    renderChips();
+    render(true);
   }
 
   function renderChips() {
@@ -262,6 +307,11 @@
         title: '営業時間を登録している ' + withHours + ' 店のうち、いま営業中の店だけを表示',
         onclick: function () { state.openOnly = !state.openOnly; renderChips(); render(true); }
       }, ['営業中のみ', h('span', { class: 'n', text: withHours + '店中' })]));
+      els.chips.appendChild(h('button', {
+        class: 'chip chip-when', type: 'button', 'aria-pressed': state.whenOn ? 'true' : 'false',
+        'aria-expanded': state.whenOn ? 'true' : 'false', 'aria-controls': 'when-fields',
+        onclick: toggleWhen
+      }, [state.whenOn && state.when ? Lib.formatWhen(state.when) : '日時を指定']));
     }
     Lib.buildFacets(state.shops).forEach(function (f) {
       var active = state.facet.type === f.type && state.facet.value === f.value;
@@ -329,16 +379,66 @@
     row('出典', h('a', { href: program.source_url, target: '_blank', rel: 'noopener noreferrer', text: program.source_name }));
     row('情報取得日', document.createTextNode(formatDateJa(program.source_retrieved_at)));
     row('発行者', document.createTextNode(program.issuer));
-    row('利用期間', document.createTextNode(formatDateJa(program.valid_from) + ' 〜 ' + formatDateJa(program.valid_to)));
+    var period = program.valid_from && program.valid_to
+      ? formatDateJa(program.valid_from) + ' 〜 ' + formatDateJa(program.valid_to)
+      : '公式サイトでご確認ください';
+    row('利用期間', document.createTextNode(period));
     document.getElementById('official-link').href = program.official_url;
+  }
+
+  /* ---------- 券（プログラム）の切り替え ---------- */
+  var NOTICE_BASE = '掲載内容は取得時点のものです。ご利用前に各店舗へご確認ください。営業時間はGoogleマップでも確認できます。';
+
+  /** 券を切り替えて、その店舗データを読み込み直す。 */
+  function selectProgram(program) {
+    state.program = program;
+    state.facet = { type: 'all', value: '' };
+    state.query = '';
+    state.openOnly = false;
+    state.whenOn = false;
+    state.when = null;
+    els.q.value = '';
+    els.whenFields.hidden = true;
+    els.program.value = program.id;
+    document.title = program.name + ' 加盟店マップ（非公式）';
+    els.title.textContent = program.name + ' 加盟店マップ';
+    els.notice.textContent = (program.notice ? program.notice + ' ' : '') + NOTICE_BASE;
+    fillAbout(program);
+    if (map && program.map_center) { map.setView(program.map_center, program.map_zoom || 15); }
+    return getJSON('data/' + program.file).then(function (shops) {
+      if (state.program !== program) { return; } // 読み込み中に別の券へ切り替えられた
+      state.shops = shops;
+      renderChips();
+      render(true);
+      var missing = shops.filter(function (s) { return !Lib.hasCoords(s); }).length;
+      var dev = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || /[?&]debug=1/.test(location.search);
+      if (missing && dev) {
+        toast('座標が未設定の店舗が ' + missing + ' 件あります。scripts/geocode.py → build_data.py を実行してください。');
+      }
+    });
+  }
+
+  function showLoadError(e) {
+    els.count.textContent = '読み込みに失敗しました';
+    els.list.textContent = '';
+    els.list.appendChild(h('li', { class: 'empty', text: '店舗データを読み込めませんでした。通信状況をご確認のうえ、再読み込みしてください。' }));
+    setSheet('half');
+    if (window.console) { console.error(e); }
   }
 
   /* ---------- 起動 ---------- */
   function init() {
-    ['q', 'locate', 'radius', 'chips', 'sheet', 'sheet-handle', 'count', 'list', 'toast', 'about', 'about-btn'].forEach(function (id) {
+    ['q', 'locate', 'radius', 'chips', 'sheet', 'sheet-handle', 'count', 'list', 'toast', 'about', 'about-btn',
+     'when-fields', 'when-date', 'when-time', 'when-now', 'program', 'program-row', 'title', 'notice'].forEach(function (id) {
       els[id.replace(/-(\w)/g, function (_, c) { return c.toUpperCase(); })] = document.getElementById(id);
     });
     els.handle = els.sheetHandle;
+
+    fillTimeOptions();
+    function onWhenChange() { applyWhen(); renderChips(); render(false); }
+    els.whenDate.addEventListener('change', onWhenChange);
+    els.whenTime.addEventListener('change', onWhenChange);
+    els.whenNow.addEventListener('click', function () { setWhenInputsToNow(); onWhenChange(); });
 
     els.handle.addEventListener('click', cycleSheet);
     els.locate.addEventListener('click', locate);
@@ -358,29 +458,25 @@
     });
 
     getJSON('data/index.json').then(function (idx) {
+      var programs = idx.programs;
       var wanted = new URLSearchParams(location.search).get('program');
-      var program = idx.programs.filter(function (p) { return p.id === wanted; })[0] || idx.programs[0];
-      state.program = program;
-      document.title = program.name + ' 加盟店マップ（非公式）';
-      fillAbout(program);
+      var program = programs.filter(function (p) { return p.id === wanted; })[0] || programs[0];
+
+      // 券が2つ以上あるときだけ、切り替えの選択欄を出す
+      programs.forEach(function (p) { els.program.appendChild(h('option', { value: p.id, text: p.name })); });
+      els.programRow.hidden = programs.length < 2;
+      els.program.addEventListener('change', function () {
+        var next = programs.filter(function (p) { return p.id === els.program.value; })[0];
+        if (!next) { return; }
+        try { history.replaceState(null, '', '?program=' + encodeURIComponent(next.id)); } catch (e) { /* file:// など */ }
+        els.list.textContent = '';
+        els.count.textContent = '読み込み中…';
+        selectProgram(next).catch(showLoadError);
+      });
+
       initMap(program);
-      return getJSON('data/' + program.file);
-    }).then(function (shops) {
-      state.shops = shops;
-      renderChips();
-      render(true);
-      var missing = shops.filter(function (s) { return !Lib.hasCoords(s); }).length;
-      var dev = location.hostname === 'localhost' || location.hostname === '127.0.0.1' || /[?&]debug=1/.test(location.search);
-      if (missing && dev) {
-        toast('座標が未設定の店舗が ' + missing + ' 件あります。scripts/geocode.py → build_data.py を実行してください。');
-      }
-    }).catch(function (e) {
-      els.count.textContent = '読み込みに失敗しました';
-      els.list.textContent = '';
-      els.list.appendChild(h('li', { class: 'empty', text: '店舗データを読み込めませんでした。通信状況をご確認のうえ、再読み込みしてください。' }));
-      setSheet('half');
-      if (window.console) { console.error(e); }
-    });
+      return selectProgram(program);
+    }).catch(showLoadError);
   }
 
   if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', init); } else { init(); }

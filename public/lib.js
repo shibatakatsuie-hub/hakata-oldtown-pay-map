@@ -34,6 +34,35 @@
     return Number(p[0]) * 60 + Number(p[1]);
   }
 
+  /** 日本時間の日付 'YYYY-MM-DD' */
+  function jstYMD(date) {
+    return new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit' }).format(date);
+  }
+
+  /** 日本時間の日付と時刻から Date を作る。形式が不正なら null。 */
+  function makeJstDate(ymd, time) {
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(ymd || '') || !/^\d{2}:\d{2}$/.test(time || '')) { return null; }
+    var d = new Date(ymd + 'T' + time + ':00+09:00');
+    return isNaN(d.getTime()) ? null : d;
+  }
+
+  /** 日本時間の時刻を30分単位に切り下げた 'HH:MM'（例 12:47 → 12:30）。 */
+  function floorTo30(date) {
+    var t = jstParts(date);
+    return hhmm(t.min - (t.min % 30));
+  }
+
+  /** '10/24(土)' */
+  function dayLabel(date) {
+    var p = jstYMD(date).split('-');
+    return Number(p[1]) + '/' + Number(p[2]) + '(' + DAY_JA[jstParts(date).day] + ')';
+  }
+
+  /** '10/24(土) 23:30' */
+  function formatWhen(date) {
+    return dayLabel(date) + ' ' + hhmm(jstParts(date).min);
+  }
+
   /** 端末のタイムゾーンに関係なく日本時間の {day: 0=月..6=日, min: 0..1439} を返す。 */
   function jstParts(date) {
     var parts = new Intl.DateTimeFormat('en-US', {
@@ -185,7 +214,12 @@
     todayText: todayText,
     weekRows: weekRows,
     formatSpans: formatSpans,
-    jstParts: jstParts
+    jstParts: jstParts,
+    jstYMD: jstYMD,
+    makeJstDate: makeJstDate,
+    floorTo30: floorTo30,
+    dayLabel: dayLabel,
+    formatWhen: formatWhen
   };
 
   root.Lib = api;
